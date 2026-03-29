@@ -1,7 +1,7 @@
 # GLFW - Graphics Library Framework for Window & Input Management
 # Simple, lightweight windowing library for Vulkan/OpenGL
 
-extern lib "glfw3":
+extern lib "glfw3dll":
     # ===== Initialization & Termination =====
     fun glfwInit() -> i32
     fun glfwTerminate()
@@ -33,7 +33,8 @@ extern lib "glfw3":
     # ===== Event Handling =====
     fun glfwPollEvents()
     fun glfwWaitEvents()
-    fun glfwWaitEventsTimeout(timeout: f64)
+    # glfwWaitEventsTimeout requires f64 (not yet supported)
+    # fun glfwWaitEventsTimeout(timeout: f64)
     fun glfwPostEmptyEvent()
     
     # ===== Context & Rendering =====
@@ -47,7 +48,8 @@ extern lib "glfw3":
     # ===== Input - Mouse =====
     fun glfwGetMouseButton(window: i64, button: i32) -> i32
     fun glfwGetCursorPos(window: i64, xpos: i64, ypos: i64)
-    fun glfwSetCursorPos(window: i64, xpos: f64, ypos: f64)
+    # glfwSetCursorPos requires f64 (not yet supported)
+    # fun glfwSetCursorPos(window: i64, xpos: f64, ypos: f64)
     fun glfwSetCursorPosCallback(window: i64, callback: i64) -> i64
     fun glfwSetMouseButtonCallback(window: i64, callback: i64) -> i64
     fun glfwSetScrollCallback(window: i64, callback: i64) -> i64
@@ -55,8 +57,9 @@ extern lib "glfw3":
     fun glfwGetInputMode(window: i64, mode: i32) -> i32
 
     # ===== Timing =====
-    fun glfwGetTime() -> f64
-    fun glfwSetTime(time: f64)
+    # glfwGetTime/SetTime require f64 (not yet supported)
+    # fun glfwGetTime() -> f64
+    # fun glfwSetTime(time: f64)
 
     # ===== Vulkan Integration =====
     fun glfwVulkanSupported() -> i32
