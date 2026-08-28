@@ -4,6 +4,7 @@
 [info]
 name = glfw
 version = 3.3.0
+layer = binding
 description = GLFW - Multi-platform library for OpenGL, Vulkan and window management
 
 [libs]
