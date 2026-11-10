@@ -21,3 +21,8 @@ macos = libglfw.3.dylib
 
 [dependencies]
 # Other modules this module depends on (optional)
+
+[target]
+# Capabilities the selected target must provide; compared with the target's
+# library/platform/<target-id>/platform.toml [capabilities] at compile time.
+requires = "window"
